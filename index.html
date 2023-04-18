@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Interactive rating component</title>
+
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./script.js"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <main>
+    <form class="container" id="container-rating" onsubmit="return false;">
+      <div class="container" id="container-icon">
+        <img src="./images/icon-star.svg" alt="icon-star" id="img-star">
+      </div>
+      <h1 class="title">How did we do?</h1>
+
+      <p class="context">Please let us know how we did with your support request. All feedback is appreciated to help us improve our offering!</p>
+
+      <div class="container" id="container-rate">
+        <div id="rate-1" class="rate-score" onclick="rateSelect(1)">
+          <p>1</p>
+        </div>
+        
+        <div id="rate-2" class="rate-score" onclick="rateSelect(2)">
+          <p>2</p>
+        </div>
+        
+        <div id="rate-3" class="rate-score" onclick="rateSelect(3)">
+          <p>3</p>
+        </div>
+        
+        <div id="rate-4" class="rate-score" onclick="rateSelect(4)">
+          <p>4</p>
+        </div>
+        
+        <div id="rate-5" class="rate-score" onclick="rateSelect(5)">
+          <p>5</p>
+        </div>
+      </div>
+
+      <input type="number" id="rate-holder" hidden>
+
+      <button class="btn"  id="btn-submit" type="submit" disabled onclick="submitRate()">
+        <p>SUBMIT</p>
+      </button>
+    </form>
+
+    <div class="container container-thankyou" id="container-thankyou">
+      <img src="./images/illustration-thank-you.svg" alt="icon-thankyou">
+
+      <div class="container" id="container-rated">
+        <p id="rate-final">You selected 4 out of 5</p>
+      </div>
+
+      <h1 class="title">Thank you!</h1>
+
+      <p class="context">We appreciate you taking the time to give a rating. If you ever need more support, don't hesitate to get in touch!</p>
+    </div>
+  </main>
+
+  <footer class="attribution">
+    <span>Challenge by <a href="https://www.frontendmentor.io/challenges/interactive-rating-component-koxpeBUmI" target="_blank">Frontend Mentor</a>.</span>
+    
+    <div class="separator"></div>
+    
+    <a href="./design/desktop-design.jpg" target="_blank">Design Guide - Desktop</a>
+    
+    <div class="separator"></div>
+
+    <a href="./design/mobile-design.jpg" target="_blank">Design Guide - Mobile</a>
+    
+    <div class="separator"></div>
+    
+    <div class="rating">
+      <span>Difficulty: Newbie</span>
+      <br class="text-cutter">
+      <span>[</span>
+      <div class="rate rate-lit" id="rate-newbie"></div>
+      <div class="rate" id="rate-junior"></div>
+      <div class="rate" id="rate-intermediate"></div>
+      <div class="rate" id="rate-advanced"></div>
+      <div class="rate" id="rate-guro"></div>
+      <span>]</span>
+    </div>
+    
+    <div class="separator"></div>
+    
+    <span>Coded by <a href="https://github.com/EcePJD">Patrick James O. De Leon</a>.</span>
+  </footer>
+</body>
+</html>
